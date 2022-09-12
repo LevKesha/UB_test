@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web-app
-      - build: ./app1
+      - image: ./app1
 ---
 apiVersion: v1
 kind: Service
