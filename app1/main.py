@@ -12,7 +12,7 @@ def home():
 
 @app.route('/post', methods=['POST'])
 def api_post():
-    name = request.args["name"]
+    name = str(request.args["name"])
     jobs.append(name)
     return '', 200
 
