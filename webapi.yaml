@@ -14,19 +14,18 @@ spec:
         app: web
     spec:
       containers:
-      - name: webApp
-        image: ./app1
+      - name: web-app
+      - build: ./app1
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: webApi
+  name: web-api
   namespace: default
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    bb: web
+    app: web
   ports:
   - port: 5000
     targetPort: 5000
-    nodePort: 5000
