@@ -15,7 +15,9 @@ spec:
     spec:
       containers:
       - name: web-app
-      - image: ./app1
+        image: lev/webapp
+        ports:
+        -  containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
