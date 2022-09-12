@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: lev/webapp
+        image: keshagold/webapp
         ports:
         -  containerPort: 5000
 ---
