@@ -1,7 +1,7 @@
 FROM python:3.6.1
 COPY ./requirements.txt /requirements.txt
-WORKDIR ~/webApi
+WORKDIR /
 RUN pip install -r requirements.txt
-COPY . ~/webApi
+COPY . /
 ENTRYPOINT [ "python3" ]
 CMD [ "main.py" ]
