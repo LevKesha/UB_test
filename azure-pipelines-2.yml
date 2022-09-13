@@ -16,7 +16,7 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/app1/dockerfile'
   tag: '$(Build.BuildId)'
   imageName: zxcv02.azurecr.io/app1:$(build.buildId)
-  azureSubscription: ub
+  azureSubscription: ubweb
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
