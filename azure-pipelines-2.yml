@@ -15,7 +15,7 @@ variables:
   containerRegistry: 'ubreg1.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/app1/dockerfile'
   tag: '$(Build.BuildId)'
-  imageName: zxcv02.azurecr.io/app1:$(build.buildId)
+  imageName: ubreg1.azurecr.io/app1:$(build.buildId)
   azureSubscription: ub
 
   # Agent VM image name
