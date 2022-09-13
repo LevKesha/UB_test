@@ -15,6 +15,8 @@ variables:
   containerRegistry: 'ubreg1.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/app1/dockerfile'
   tag: '$(Build.BuildId)'
+  imageName: zxcv02.azurecr.io/app1:$(build.buildId)
+  azureSubscription: 'Azure subscription 1'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -39,3 +41,9 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureWebAppContainer@1
+      displayName: Deploy web app
+      inputs:
+       appName: web
+       azureSubscription: $(azureSubscription)
+       imageName: $(imageName)
