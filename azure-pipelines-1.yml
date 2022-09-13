@@ -27,7 +27,7 @@ stages:
     displayName: Build
     pool:
       vmImage: $(vmImageName)
-      name: default
+      name: Default
       demands: docker
     steps:
     - task: Docker@2
