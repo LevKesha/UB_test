@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: keshagold/webapp
+        image: keshagold/saltapp
         ports:
         -  containerPort: 5000
 ---

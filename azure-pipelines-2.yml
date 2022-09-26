@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'bccf15a0-7e04-48e2-a8c8-80493f9577a3'
-  imageRepository: 'ubwebapp'
+  imageRepository: 'saltwebapp'
   containerRegistry: 'ubreg1.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/app1/dockerfile'
   tag: '$(Build.BuildId)'
@@ -44,6 +44,6 @@ stages:
     - task: AzureWebAppContainer@1
       displayName: Deploy web app
       inputs:
-       appName: ubweb
+       appName: saltweb
        azureSubscription: $(azureSubscription)
        imageName: $(imageName)
