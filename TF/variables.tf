@@ -3,11 +3,11 @@ variable "agent_count" {
 }
 
 variable "aks_service_principal_app_id" {
-  default = "737fa99b-e59a-48a3-a766-8dd0d00b60e8"
+  default = ""
 }
 
 variable "aks_service_principal_client_secret" {
-  default = "qgR8Q~5mhGY3Ry8WXzUufJTTHj.YE4R-jOmcAcQ4"
+  default = ""
 }
 
 variable "cluster_name" {
